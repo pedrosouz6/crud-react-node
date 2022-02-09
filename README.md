@@ -1,12 +1,15 @@
-# Explicando o projeto
+## Explicando o projeto
 
 <img src="./img-app.png" alt="img" />
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Imagem do projeto
 
-## Available Scripts
+### Sobre
 
-In the project directory, you can run:
+Esse projeto foi desenvolvido para você adicionar carros(marca e modelo), deletar e atualizar. <i>Desenvolvido por fins de estudos.</i>
+
+### Tecnologias usadas
+
 
 ### `npm start`
 
