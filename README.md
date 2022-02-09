@@ -2,7 +2,7 @@
 
 <img src="./img-projeto.png" alt="img" />
 
-#### Imagem do projeto
+#### Imagem do projeto final
 
 ##
 
