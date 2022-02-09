@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Explicando o projeto
 
 <img src="./img-app.png" alt="img" />
 
