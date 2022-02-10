@@ -1,7 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-
-
 #ignorar o acesso com o db
 /Server/node_modules
 /Server/conection.js

@@ -58,4 +58,10 @@ export const FormStyle = style.form `
         font-weight: 500;
     }
 
+    p {
+        text-align: center;
+        color: red;
+        letter-spacing: .5px;
+    }
+
 `

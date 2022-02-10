@@ -72,4 +72,10 @@ export const Modal = style.form `
         text-decoration: underline; 
     }
 
+    p {
+        text-align: center;
+        color: red;
+        letter-spacing: .5px;
+    }
+
 `

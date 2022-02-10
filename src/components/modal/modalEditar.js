@@ -15,10 +15,27 @@ export default function Editar(){
 
     const [ newBrand, setNewBrand ] = useState(brand);
     const [ newModel, setNewModel ] = useState(model);
-    
-    const updateCar = (e) => {
+    const [ validate, setValidate ] = useState(true);
+ 
+    //Validando os inputs e implementando a lógica de dar focus()
+    const validateInputs = (e) => {
         e.preventDefault();
 
+        if(newBrand === "" || newModel === "") {
+            setValidate(false);
+    
+            if(newBrand.length > 0) {
+                document.getElementById("editModel").focus();
+            } else {
+                document.getElementById("editBrand").focus();
+            }
+        } else {
+            updateCar();
+        }
+    }
+    
+    //Requisição para a api
+    const updateCar = () => {
         Axios.put(`http://localhost:8080/update/${id}`, {
             newBrand: newBrand,
             newModel: newModel
@@ -30,18 +47,23 @@ export default function Editar(){
 
     return(
         
-        <Modal onSubmit={updateCar}>
+        <Modal onSubmit={validateInputs}>
             <h2>Edit car</h2>
             <input type="text" 
             placeholder="Brand" 
+            id="editBrand"
             defaultValue={newBrand} 
             onChange={(e) => setNewBrand(e.target.value)}
             autoFocus/>
 
             <input type="text" 
             placeholder="Model" 
+            id="editModel"
             onChange={(e) => setNewModel(e.target.value)}
             defaultValue={newModel}  />
+
+            {/* Mensagem de erro */}
+            {validate ? "" : <p>Preencha o(s) campo(s)</p>}
 
             <div className="form__submit">
                 <input type="submit"  value="Edit" />
