@@ -22,6 +22,7 @@ export default function App() {
   const [ load, setLoad ] = useState(true);
   const [ call, setCall ] = useState(false);
 
+  //Requisição para buscar os dados
   useEffect(() => {
       Axios.get("http://localhost:8080/car")
       .then(results => setData(results.data));

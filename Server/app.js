@@ -1,3 +1,4 @@
+//Importações
 const express = require("express");
 const cors = require("cors");
 
@@ -8,6 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//Adicionar os dados no banco de dados 
 app.post("/add", (req, res) => {
     const { model, brand } = req.body;
     const sql = `INSERT INTO cars (brand, model) VALUES('${brand}', '${model}')`;
@@ -16,6 +18,7 @@ app.post("/add", (req, res) => {
     })
 });
 
+//Buscar os dados no banco de dados 
 app.get("/car", (req, res) => {
     const sql = "SELECT * FROM cars ORDER BY id DESC";
     conection.query(sql, (err, results) => {
@@ -23,6 +26,7 @@ app.get("/car", (req, res) => {
     })
 });
 
+//Atualizar algum dado específico no banco de dados 
 app.put("/update/:id", (req, res) => {
     const { id } = req.params;
     const { newModel, newBrand } = req.body;
@@ -32,6 +36,7 @@ app.put("/update/:id", (req, res) => {
     })
 })
 
+//Deletar algum dado específico no banco de dados 
 app.delete("/delete/:id", (req, res) => {
     const { id } = req.params;
     const sql = `DELETE FROM cars WHERE id = '${id}'`;
@@ -40,4 +45,5 @@ app.delete("/delete/:id", (req, res) => {
     })
 })
 
+//Porta 8080
 app.listen(8080);

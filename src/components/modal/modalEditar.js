@@ -8,9 +8,11 @@ import { ContextCar } from "../context/car";
 
 export default function Editar(){
 
+    //Pegando os dados da url
+    const { id, brand, model } = useParams();
+
     const { call, setCall } = useContext(ContextCar);
 
-    const { id, brand, model } = useParams();
     const navigate = useNavigate();
 
     const [ newBrand, setNewBrand ] = useState(brand);

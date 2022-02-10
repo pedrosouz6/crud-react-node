@@ -19,7 +19,6 @@ export default function Excluir({ setClose, close, id }){
         setClose(false);
     }
     
-
     return(
         <Modal>
             <div className={close ? "modal__excluir true" : "modal__excluir"}>
