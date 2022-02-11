@@ -18,6 +18,20 @@ export default function Cards(){
     const [close, setClose] = useState(false);
     const [id, setId] = useState(null);
 
+    //Paginação 
+    const [itemsPage, setItemsPage] = useState(5);
+    const [pageCurrent, setPageCurrent] = useState(4);
+
+    const totalPage = Math.ceil(data.length / itemsPage);
+    const start = itemsPage * pageCurrent;
+    const pageLast = start + itemsPage;
+    const itemsCurrent = data.slice(start, pageLast)
+
+    console.log(`${itemsCurrent}`)
+
+
+
+    //Clicar no butão deletar
     const excluir = (id) => {
         setClose(true);
         setId(id);
