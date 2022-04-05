@@ -10,6 +10,8 @@
 
 Esse projeto foi desenvolvido para você adicionar qualquer carro(marca e modelo), deletar e atualizar. <i>Desenvolvido por fins de estudos.</i>
 
+##
+
 ### Pré-requisitos
 
 <p> Antes de começar, você precisa ter instalado em sua máquina as seguintes ferramentas <a href='https://git-scm.com/downloads'> Git </a>, 
@@ -32,6 +34,7 @@ Esse projeto foi desenvolvido para você adicionar qualquer carro(marca e modelo
   # o servidor iniciará na porta:3000 - acesse <http://localhost:3000>
 ```
 
+##
 
 ### Tecnologias que foram usadas
 
