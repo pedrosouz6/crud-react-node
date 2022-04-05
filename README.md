@@ -18,7 +18,7 @@ Esse projeto foi desenvolvido para você adicionar qualquer carro(marca e modelo
 #### Rodando o Front-end
  ``` bash
   # Clone esse repositório
-  $ git clone <https://github.com/pedrosouz6/restaurant>
+  $ git clone <https://github.com/pedrosouz6/crud-react-node>
   
   # Acesse a pasta do projeto no terminal/cmd
   $ cd NomeDaPasta
